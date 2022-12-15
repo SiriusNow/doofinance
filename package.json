@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "start": "next start",
+    "start": "concurrently \"next start\" \"cd utils && node index.js\"",
     "lint": "next lint",
     "dev": "concurrently \"next dev\" \"cd utils && node index.js\""
   },

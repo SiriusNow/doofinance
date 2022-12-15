@@ -1,7 +1,3 @@
-.container {
-  padding: 0 2rem;
-}
-
 .main {
   min-height: 100vh;
   padding: 4rem 0;
@@ -10,7 +6,63 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #000000;
+  background-image: url("https://ja.hyperledger.org/wp-content/uploads/2016/08/hl_finance.jpg");
 }
+.container {
+  padding: 0;
+}
+.container > div {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+  width: 500px;
+}
+
+.container > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 5px;
+}
+.container > div > div > input{
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  padding: 5px;
+}
+/* .container button {
+  width: 100%;
+  padding: 10px;
+} */
+.delbtn {
+  float: right;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+}
+.item{
+  padding-top: 10px;
+}
+
+.button {
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 50px;
+  background-color: #174170;
+}
+.btn {
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+.btn:hover, .button:hover {
+  outline: 2px solid #143861;
+
+}
+
 
 .footer {
   display: flex;
@@ -42,16 +94,24 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3.5rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+.span{
+  color: white;
+  padding-top: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 
 .title,
 .description {
   text-align: center;
+  color: white;
 }
 
 .description {
-  margin: 4rem 0;
+  margin: 2rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
 }
@@ -74,8 +134,8 @@
 }
 
 .card {
-  margin: 1rem;
-  padding: 1.5rem;
+  margin: 0.5rem;
+  padding: 1rem;
   text-align: left;
   color: inherit;
   text-decoration: none;
@@ -85,12 +145,12 @@
   max-width: 300px;
 }
 
-.card:hover,
+/* .card:hover,
 .card:focus,
 .card:active {
   color: #0070f3;
   border-color: #0070f3;
-}
+} */
 
 .card h2 {
   margin: 0 0 1rem 0;

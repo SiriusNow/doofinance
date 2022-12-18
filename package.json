@@ -1,12 +1,12 @@
 {
   "name": "lab8",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "build": "next build",
-    "start": "concurrently \"next start\" \"cd utils && node index.js\"",
+    "start": "concurrently \"next start\" \" node utils\"",
     "lint": "next lint",
-    "dev": "concurrently \"next dev\" \"cd utils && node index.js\""
+    "dev": "node utils"
   },
   "dependencies": {
     "axios": "^1.2.1",

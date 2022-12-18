@@ -136,6 +136,6 @@ app.post("/delete/:_id", async (req, res) => {
 //     res.send(staff)
 // })
 
-app.listen(3001, () => {
+app.listen(process.env.PORT || 3001, () => {
   console.log("Server ajiljiin");
 });

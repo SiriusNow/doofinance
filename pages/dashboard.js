@@ -171,7 +171,7 @@ export default function Dashboard() {
   useEffect(() => {
     const _id = localStorage.getItem("id");
     setLoading(true);
-    fetch("http://doofinanceserver.vercel.app/list/" + _id).then(
+    fetch("https://doofinanceserver.vercel.app/list/" + _id).then(
       async (res) => {
         let response = await res.json();
         setData(response);
@@ -192,7 +192,7 @@ export default function Dashboard() {
   const createList = () => {
     if (type != "" && value > 0 && category != "") {
       axios
-        .post("http://doofinanceserver.vercel.app/addList", {
+        .post("https://doofinanceserver.vercel.app/addList", {
           type: type,
           income: income,
           category: category,

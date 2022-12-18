@@ -22,7 +22,7 @@ export default function Home() {
 
   const createUser = () => {
     if (pass == pass1 && email != "" && pass != "" && test == true) {
-      axios.post("http://doofinanceserver-7kqrcbpfy-siriusnow.vercel.app/addUser", {
+      axios.post("http://doofinanceserver.vercel.app/addUser", {
         email: email,
         password: pass,
         phoneNumber: tell,

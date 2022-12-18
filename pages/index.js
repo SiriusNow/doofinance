@@ -19,7 +19,7 @@ export default function Home() {
     const query = email;
     if (query != "") {
       try {
-        await fetch("http://doofinanceserver-7kqrcbpfy-siriusnow.vercel.app/user/" + query)
+        await fetch("http://doofinanceserver.vercel.app/user/" + query)
           .then(async (res) => {
             let response = await res.json();
             return response;

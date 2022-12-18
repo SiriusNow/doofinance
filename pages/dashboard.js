@@ -171,26 +171,28 @@ export default function Dashboard() {
   useEffect(() => {
     const _id = localStorage.getItem("id");
     setLoading(true);
-    fetch("http://doofinanceserver.vercel.app/list/" + _id).then(async (res) => {
-      let response = await res.json();
-      setData(response);
-      setDatas(dataD(response, true));
-      setDatas1(dataD(response, false));
-      setBarChart(
-        chartData(response, startDate.getDate() + 1, startDate.getDate() - 8)
-      );
-      // response.forEach((e)=>{
-      //   datas.datasets[0].data.push(e.value);
-      //   datas.labels.push(e.type);
-      // })
-      setLoading(false);
-      return response;
-    });
+    fetch("http://doofinanceserver.vercel.app/list/" + _id).then(
+      async (res) => {
+        let response = await res.json();
+        setData(response);
+        setDatas(dataD(response, true));
+        setDatas1(dataD(response, false));
+        setBarChart(
+          chartData(response, startDate.getDate() + 1, startDate.getDate() - 8)
+        );
+        // response.forEach((e)=>{
+        //   datas.datasets[0].data.push(e.value);
+        //   datas.labels.push(e.type);
+        // })
+        setLoading(false);
+        return response;
+      }
+    );
   }, [checkPost]);
   const createList = () => {
     if (type != "" && value > 0 && category != "") {
       axios
-        .post("http://localhost:3001/addList", {
+        .post("http://doofinanceserver.vercel.app/addList", {
           type: type,
           income: income,
           category: category,

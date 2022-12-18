@@ -171,7 +171,7 @@ export default function Dashboard() {
   useEffect(() => {
     const _id = localStorage.getItem("id");
     setLoading(true);
-    fetch("http://localhost:3001/list/" + _id).then(async (res) => {
+    fetch("http://doofinanceserver-7kqrcbpfy-siriusnow.vercel.app/list/" + _id).then(async (res) => {
       let response = await res.json();
       setData(response);
       setDatas(dataD(response, true));

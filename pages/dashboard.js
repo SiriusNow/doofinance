@@ -296,9 +296,9 @@ export default function Dashboard() {
   }
   const checkBox = (checkbox, name) => {
     if (name == "hool" || "zeel" || "unaa" || "busad_zarlaga") {
-      setIncome(true);
-    } else {
       setIncome(false);
+    } else {
+      setIncome(true);
     }
     var checkboxes = document.getElementsByName("check");
     checkboxes.forEach((item) => {

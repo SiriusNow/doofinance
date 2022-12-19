@@ -248,6 +248,11 @@ export default function Dashboard() {
       datasets: [
         {
           data: Object.values(res),
+          backgroundColor: [
+            "rgba(75, 192, 192, 0.6)",
+            "rgba(153, 102,255, 0.6)",
+            "rgba(201, 203,207, 0.6)",
+          ],
         },
       ],
     };

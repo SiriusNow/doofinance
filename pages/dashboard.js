@@ -301,10 +301,20 @@ export default function Dashboard() {
   }
   const checkBox = (checkbox, name) => {
     console.log(name);
-    if (name == "hool" || "zeel" || "unaa" || "busad_zarlaga") {
+    if (
+      name == "hool" ||
+      name == "zeel" ||
+      name == "unaa" ||
+      name == "busad_zarlaga"
+    ) {
       setIncome(false);
     }
-    if (name == "tsalin" || "noat_butsaalt" || "avlaga" || "busad_orlogo") {
+    if (
+      name == "tsalin" ||
+      name == "noat_butsaalt" ||
+      name == "avlaga" ||
+      name == "busad_orlogo"
+    ) {
       setIncome(true);
     }
     var checkboxes = document.getElementsByName("check");

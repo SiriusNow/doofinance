@@ -311,7 +311,7 @@ export default function Dashboard() {
     setLoading(true);
     try {
       axios
-        .post("http://doofinanceserver.vercel.app/delete/" + id)
+        .post("https://doofinanceserver.vercel.app/delete/" + id)
         .then((suc) => {
           setcheckPost(!checkPost);
           setModalOpen(!modalOpen);

@@ -300,6 +300,7 @@ export default function Dashboard() {
     };
   }
   const checkBox = (checkbox, name) => {
+    console.log(name);
     if (name == "hool" || "zeel" || "unaa" || "busad_zarlaga") {
       setIncome(false);
     } else {

@@ -58,7 +58,7 @@ export default function Dashboard() {
           label: new Date().getFullYear(),
           backgroundColor: "#4a5568",
           borderColor: "#4a5568",
-          data: [30, 78, 56, 34, 100, 45, 13],
+          data: [],
           fill: false,
           barThickness: 8,
         },
@@ -67,7 +67,7 @@ export default function Dashboard() {
           fill: false,
           backgroundColor: "#3182ce",
           borderColor: "#3182ce",
-          data: [27, 68, 86, 74, 10, 4, 87],
+          data: [],
           barThickness: 8,
         },
       ],
@@ -248,14 +248,6 @@ export default function Dashboard() {
       datasets: [
         {
           data: Object.values(res),
-          backgroundColor: [
-            "rgb(255, 99, 132)",
-            "rgb(54, 162, 235)",
-            "rgb(255, 205, 86)",
-            "rgba(75, 192, 192, 0.6)",
-            "rgba(153, 102,255, 0.6)",
-            "rgba(201, 203,207, 0.6)",
-          ],
         },
       ],
     };
@@ -318,11 +310,13 @@ export default function Dashboard() {
   const del = (id) => {
     setLoading(true);
     try {
-      axios.post("http://localhost:3001/delete/" + id).then((suc) => {
-        setcheckPost(!checkPost);
-        setModalOpen(!modalOpen);
-        setModalError("Амжилттай устгалаа");
-      });
+      axios
+        .post("http://doofinanceserver.vercel.app/delete/" + id)
+        .then((suc) => {
+          setcheckPost(!checkPost);
+          setModalOpen(!modalOpen);
+          setModalError("Амжилттай устгалаа");
+        });
     } catch {
       setModalOpen(!modalOpen);
       setModalError("Устгаж чадсангүй");

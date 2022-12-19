@@ -303,7 +303,8 @@ export default function Dashboard() {
     console.log(name);
     if (name == "hool" || "zeel" || "unaa" || "busad_zarlaga") {
       setIncome(false);
-    } else {
+    }
+    if (name == "tsalin" || "noat_butsaalt" || "avlaga" || "busad_orlogo") {
       setIncome(true);
     }
     var checkboxes = document.getElementsByName("check");
